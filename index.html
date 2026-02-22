@@ -33,22 +33,36 @@
     <p>Halaman ini memuat info resmi DOKB, regulasi transportasi online, dan edukasi driver.</p>
   </section>
 
-  <section style="margin-top:40px; padding:20px; border:1px solid #ddd; border-radius:10px;">
-  <h2>💰 Cek Tarif TBB Kalsel</h2>
-  <p>Mengacu pada SK Gubernur Kalimantan Selatan.<br>
-  <strong>Hasil adalah pendapatan bersih minimal driver.</strong></p>
+  <section style="margin:60px auto; max-width:600px; background:#ffffff; padding:30px; border-radius:16px; box-shadow:0 10px 25px rgba(0,0,0,0.08); font-family:Arial, sans-serif;">
 
-  <label>Jarak Perjalanan (km):</label><br>
-  <input type="number" id="jarak" step="0.1" placeholder="Contoh: 6.8" style="padding:8px; width:200px;"><br><br>
+  <h2 style="text-align:center; color:#0b3d91; margin-bottom:5px;">
+    CEK TARIF BATAS BAWAH (TBB)
+  </h2>
+  <p style="text-align:center; font-size:14px; color:#555; margin-top:0;">
+    Angkutan Sewa Khusus – Kalimantan Selatan
+  </p>
 
-  <label>Tarif yang Ditawarkan (Rp):</label><br>
-  <input type="number" id="tarifInput" placeholder="Contoh: 30000" style="padding:8px; width:200px;"><br><br>
+  <p style="font-size:13px; color:#666; text-align:center; margin-bottom:25px;">
+    Mengacu pada SK Gubernur Kalimantan Selatan 
+    No. 100.3.3.1/0991/KUM/2025<br>
+    Tanggal 17 November 2025
+  </p>
 
-  <button onclick="hitungTarif()" style="padding:10px 20px; cursor:pointer;">
+  <label style="font-weight:600;">Jarak Perjalanan (km)</label><br>
+  <input type="number" id="jarak" step="0.1" placeholder="Contoh: 6.8"
+    style="width:100%; padding:10px; margin-top:5px; margin-bottom:15px; border-radius:8px; border:1px solid #ccc;">
+
+  <label style="font-weight:600;">Tarif yang Ditawarkan (Rp)</label><br>
+  <input type="number" id="tarifInput" placeholder="Contoh: 30000"
+    style="width:100%; padding:10px; margin-top:5px; margin-bottom:20px; border-radius:8px; border:1px solid #ccc;">
+
+  <button onclick="hitungTarif()"
+    style="width:100%; padding:12px; background:#0b3d91; color:#fff; border:none; border-radius:10px; font-size:15px; cursor:pointer;">
     Hitung & Bandingkan
   </button>
 
-  <div id="hasil" style="margin-top:20px;"></div>
+  <div id="hasil" style="margin-top:25px;"></div>
+
 </section>
 
 <script>
@@ -58,7 +72,8 @@ function hitungTarif() {
     let tarifTBB = 0;
 
     if (!jarak || jarak <= 0) {
-        document.getElementById("hasil").innerHTML = "Masukkan jarak yang valid.";
+        document.getElementById("hasil").innerHTML =
+        "<p style='color:red;'>Masukkan jarak yang valid.</p>";
         return;
     }
 
@@ -70,19 +85,26 @@ function hitungTarif() {
 
     tarifTBB = Math.round(tarifTBB);
 
-    let output = "<h3>Tarif Minimum TBB: Rp " + tarifTBB.toLocaleString("id-ID") + "</h3>";
-    output += "<p><strong>Status: Pendapatan Bersih Driver</strong></p>";
+    let output = "<div style='margin-top:20px; padding:20px; background:#f4f8ff; border-radius:12px;'>";
+
+    output += "<p style='margin:0; font-size:13px; color:#555;'>Tarif Minimum (Pendapatan Bersih Driver)</p>";
+    output += "<h1 style='margin:5px 0; color:#0b3d91;'>Rp " + tarifTBB.toLocaleString("id-ID") + "</h1>";
 
     if (tarifInput) {
         let selisih = tarifInput - tarifTBB;
 
         if (selisih >= 0) {
-            output += "<p style='color:green;'>✅ Sesuai atau di atas TBB</p>";
+            output += "<p style='color:green; font-weight:600;'>✅ Sesuai atau di atas TBB</p>";
         } else {
-            output += "<p style='color:red;'>❌ Di bawah TBB</p>";
-            output += "<p>Selisih kekurangan: Rp " + Math.abs(selisih).toLocaleString("id-ID") + "</p>";
+            output += "<p style='color:red; font-weight:600;'>❌ Di bawah TBB</p>";
+            output += "<p style='margin:5px 0;'>Selisih kekurangan: Rp " +
+            Math.abs(selisih).toLocaleString("id-ID") + "</p>";
         }
     }
+
+    output += "<p style='font-size:12px; color:#666; margin-top:10px;'>Perhitungan sesuai Tarif Batas Bawah Angkutan Sewa Khusus berdasarkan SK Gubernur Kalimantan Selatan.</p>";
+
+    output += "</div>";
 
     document.getElementById("hasil").innerHTML = output;
 }
