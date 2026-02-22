@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOKB – Perkumpulan Driver Online Kalimantan Selatan Bersatu</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header id="beranda">
+  <img src="logo-dokb.png" alt="Logo DOKB">
+  <h1>Perkumpulan Driver Online Kalimantan Selatan Bersatu (DOKB)</h1>
+  <p><em>Wadah solidaritas, advokasi, dan perjuangan driver online Kalimantan Selatan</em></p>
+</header>
+
+<nav>
+  <a href="#beranda">Beranda</a>
+  <a href="#tentang">Tentang DOKB</a>
+  <a href="keanggotaan.html">Keanggotaan</a>
+  <a href="#informasi">Informasi</a>
+  <a href="#kontak">Kontak</a>
+</nav>
+
+<div class="container">
+  <section id="tentang">
+    <h2>Tentang DOKB</h2>
+    <p><strong>DOKB</strong> adalah organisasi berbadan hukum, independen, dan non-profit untuk driver online Kalimantan Selatan.</p>
+  </section>
+
+  <section id="informasi">
+    <h2>Informasi</h2>
+    <p>Halaman ini memuat info resmi DOKB, regulasi transportasi online, dan edukasi driver.</p>
+  </section>
+
+  <section id="login-analisa">
+    <h2>Login Analisa Driver</h2>
+    <div id="login-box">
+      <input type="password" id="passwordInput" placeholder="Masukkan Kode Akses">
+      <button onclick="checkPassword()">Login</button>
+      <p id="loginMessage" style="color:red;"></p>
+    </div>
+
+    <div id="analisaForm" style="display:none;">
+      <p>Masukkan data harian driver:</p>
+      <input type="number" id="jamOnline" placeholder="Jam Online">
+      <input type="number" id="totalTrip" placeholder="Total Trip">
+      <input type="number" id="orderMasuk" placeholder="Order Masuk">
+      <input type="number" id="totalBruto" placeholder="Total Bruto (Rp)">
+      <button onclick="analisaData()">Analisa</button>
+      <div id="hasilAnalisa"></div>
+    </div>
+  </section>
+
+  <section id="kontak">
+    <h2>Kontak</h2>
+    <p>Email: sekretariat@dokb.or.id<br>
+       WhatsApp: +62 822-4646-3652<br>
+       Alamat: Jln. AMD XII Pondok Pinang Indah No.38 RT 027/003, Pemurus Dalam 70248, Banjarmasin</p>
+  </section>
+</div>
+
+<footer>
+  <p>© 2025 Perkumpulan DOKB | Independen | Non-profit</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
