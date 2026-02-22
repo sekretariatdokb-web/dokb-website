@@ -33,24 +33,60 @@
     <p>Halaman ini memuat info resmi DOKB, regulasi transportasi online, dan edukasi driver.</p>
   </section>
 
-  <section id="login-analisa">
-    <h2>Login Analisa Driver</h2>
-    <div id="login-box">
-      <input type="password" id="passwordInput" placeholder="Masukkan Kode Akses">
-      <button onclick="checkPassword()">Login</button>
-      <p id="loginMessage" style="color:red;"></p>
-    </div>
+  <section style="margin-top:40px; padding:20px; border:1px solid #ddd; border-radius:10px;">
+  <h2>💰 Cek Tarif TBB Kalsel</h2>
+  <p>Mengacu pada SK Gubernur Kalimantan Selatan.<br>
+  <strong>Hasil adalah pendapatan bersih minimal driver.</strong></p>
 
-    <div id="analisaForm" style="display:none;">
-      <p>Masukkan data harian driver:</p>
-      <input type="number" id="jamOnline" placeholder="Jam Online">
-      <input type="number" id="totalTrip" placeholder="Total Trip">
-      <input type="number" id="orderMasuk" placeholder="Order Masuk">
-      <input type="number" id="totalBruto" placeholder="Total Bruto (Rp)">
-      <button onclick="analisaData()">Analisa</button>
-      <div id="hasilAnalisa"></div>
-    </div>
-  </section>
+  <label>Jarak Perjalanan (km):</label><br>
+  <input type="number" id="jarak" step="0.1" placeholder="Contoh: 6.8" style="padding:8px; width:200px;"><br><br>
+
+  <label>Tarif yang Ditawarkan (Rp):</label><br>
+  <input type="number" id="tarifInput" placeholder="Contoh: 30000" style="padding:8px; width:200px;"><br><br>
+
+  <button onclick="hitungTarif()" style="padding:10px 20px; cursor:pointer;">
+    Hitung & Bandingkan
+  </button>
+
+  <div id="hasil" style="margin-top:20px;"></div>
+</section>
+
+<script>
+function hitungTarif() {
+    let jarak = parseFloat(document.getElementById("jarak").value);
+    let tarifInput = parseFloat(document.getElementById("tarifInput").value);
+    let tarifTBB = 0;
+
+    if (!jarak || jarak <= 0) {
+        document.getElementById("hasil").innerHTML = "Masukkan jarak yang valid.";
+        return;
+    }
+
+    if (jarak <= 3) {
+        tarifTBB = 16000;
+    } else {
+        tarifTBB = 16000 + (jarak - 3) * 4000;
+    }
+
+    tarifTBB = Math.round(tarifTBB);
+
+    let output = "<h3>Tarif Minimum TBB: Rp " + tarifTBB.toLocaleString("id-ID") + "</h3>";
+    output += "<p><strong>Status: Pendapatan Bersih Driver</strong></p>";
+
+    if (tarifInput) {
+        let selisih = tarifInput - tarifTBB;
+
+        if (selisih >= 0) {
+            output += "<p style='color:green;'>✅ Sesuai atau di atas TBB</p>";
+        } else {
+            output += "<p style='color:red;'>❌ Di bawah TBB</p>";
+            output += "<p>Selisih kekurangan: Rp " + Math.abs(selisih).toLocaleString("id-ID") + "</p>";
+        }
+    }
+
+    document.getElementById("hasil").innerHTML = output;
+}
+</script>
 
   <section id="kontak">
     <h2>Kontak</h2>
