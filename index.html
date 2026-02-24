@@ -7,7 +7,6 @@
 
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
 <style>
 body { font-family: 'Inter', sans-serif; }
 </style>
@@ -19,13 +18,9 @@ body { font-family: 'Inter', sans-serif; }
 <header class="bg-black fixed w-full z-50 shadow-lg">
   <div class="max-w-7xl mx-auto px-6 py-6 flex flex-col items-center">
 
-    <img src="logo-dokb.png" 
-         class="h-24 w-24 object-contain mb-3">
+    <img src="logo-dokb.png" class="h-24 w-24 object-contain mb-3">
 
-    <h1 class="text-white text-lg font-semibold text-center">
-      DOKB
-    </h1>
-
+    <h1 class="text-white text-lg font-semibold text-center">DOKB</h1>
     <p class="text-gray-400 text-xs text-center">
       Perkumpulan Driver Online Kalimantan Selatan Bersatu
     </p>
@@ -41,6 +36,9 @@ body { font-family: 'Inter', sans-serif; }
     Organisasi Resmi Driver Online  
     <span class="text-red-500">Kalimantan Selatan</span>
   </h2>
+  <p class="text-red-500 font-semibold mt-4 text-lg">
+    Mengawal Regulasi • Melindungi Driver • Menjaga Keadilan Tarif
+  </p>
   <p class="mt-6 text-gray-300 max-w-2xl mx-auto">
     Berbadan hukum, independen, dan memperjuangkan regulasi yang adil
     bagi driver online roda empat di Provinsi Kalimantan Selatan.
@@ -61,9 +59,7 @@ body { font-family: 'Inter', sans-serif; }
 <!-- LEGALITAS -->
 <section class="bg-gray-900 text-white py-20">
   <div class="max-w-5xl mx-auto px-6 text-center">
-
     <h3 class="text-3xl font-semibold mb-10">Legalitas Resmi</h3>
-
     <div class="grid md:grid-cols-2 gap-8 text-left">
 
       <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
@@ -102,6 +98,35 @@ body { font-family: 'Inter', sans-serif; }
   </a>
 </section>
 
+<!-- Visi & Misi -->
+<section class="py-20 max-w-4xl mx-auto px-6 text-center">
+  <h3 class="text-3xl font-semibold mb-6">Visi & Misi</h3>
+
+  <h4 class="text-xl font-medium mb-2">Visi</h4>
+  <p class="text-gray-700 leading-relaxed mb-6">
+    Menjadi organisasi profesional driver online roda empat yang kuat secara hukum,
+    solid secara internal, dan berperan aktif dalam pengawalan regulasi di Kalimantan Selatan.
+  </p>
+
+  <h4 class="text-xl font-medium mb-2">Misi</h4>
+  <ul class="text-gray-700 list-disc list-inside space-y-2">
+    <li>Mengawal implementasi regulasi Angkutan Sewa Khusus (ASK)</li>
+    <li>Melindungi kepentingan driver secara kolektif</li>
+    <li>Membangun sistem organisasi profesional</li>
+    <li>Menjaga independensi dari pengaruh aplikator</li>
+  </ul>
+</section>
+
+<!-- Komitmen Independensi -->
+<section class="py-16 bg-gray-100 text-center px-6 max-w-4xl mx-auto">
+  <h3 class="text-3xl font-semibold mb-4">Komitmen Independensi</h3>
+  <p class="text-gray-700 leading-relaxed">
+    DOKB bersifat independen dan tidak berada di bawah pengaruh atau kendali
+    aplikator manapun. Setiap kebijakan organisasi ditetapkan secara kolektif demi
+    kepentingan anggota.
+  </p>
+</section>
+
 <!-- PERHITUNGAN TARIF RESMI -->
 <section class="py-20 bg-gray-100">
   <div class="max-w-2xl mx-auto px-6 text-center">
@@ -136,18 +161,23 @@ body { font-family: 'Inter', sans-serif; }
     <div id="hasil" class="mt-8 text-lg"></div>
 
     <p class="text-xs text-gray-500 mt-6">
-      Perhitungan mengikuti metodologi tarif dalam regulasi 
-      yang berlaku di Provinsi Kalimantan Selatan.
+      Perhitungan mengikuti metodologi tarif dalam regulasi yang berlaku di Provinsi Kalimantan Selatan.
     </p>
 
   </div>
 </section>
 
+<!-- FOOTER -->
+<footer class="bg-black text-gray-400 text-center py-6">
+  <p>© 2025 Perkumpulan Driver Online Kalimantan Selatan Bersatu (DOKB)</p>
+  <p>Alamat: Jln. AMD XII Pondok Pinang Indah No. 38, Pemurus Dalam, Banjarmasin, Kalsel</p>
+  <p>Email: sekretariat@dokb.or.id | WhatsApp: +62 822 4646 3652</p>
+  <p>Independen • Non-Profit • Berbadan Hukum</p>
+</footer>
+
 <script>
 function hitungTarif() {
-
   let km = parseFloat(document.getElementById("jarak").value);
-
   const tarifAwal = 16000;
   const TBB = 4000;
   const TBA = 6500;
@@ -168,7 +198,6 @@ function hitungTarif() {
   }
 
   let sisaKm = km - 3;
-
   let totalBawah = tarifAwal + (sisaKm * TBB);
   let totalAtas = tarifAwal + (sisaKm * TBA);
 
