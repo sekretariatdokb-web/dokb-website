@@ -3,125 +3,131 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DOKB – Perkumpulan Driver Online Kalimantan Selatan Bersatu</title>
-  <link rel="stylesheet" href="style.css">
+  <title>DOKB - Perkumpulan Driver Online Kalimantan Selatan Bersatu</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
 
-<header id="beranda">
-  <img src="logo-dokb.png" alt="Logo DOKB">
-  <h1>Perkumpulan Driver Online Kalimantan Selatan Bersatu (DOKB)</h1>
-  <p><em>Wadah solidaritas, advokasi, dan perjuangan driver online Kalimantan Selatan</em></p>
+<body class="bg-white text-gray-800 font-sans">
+
+<!-- NAVBAR -->
+<header class="bg-white shadow-sm fixed w-full z-50">
+  <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+    <h1 class="text-lg font-bold text-[#0B2C4D]">DOKB</h1>
+    <nav class="hidden md:flex space-x-6 text-sm font-medium">
+      <a href="#tentang" class="hover:text-[#174A7C]">Tentang</a>
+      <a href="#program" class="hover:text-[#174A7C]">Program</a>
+      <a href="#keanggotaan" class="hover:text-[#174A7C]">Keanggotaan</a>
+      <a href="#kontak" class="hover:text-[#174A7C]">Kontak</a>
+    </nav>
+  </div>
 </header>
 
-<nav>
-  <a href="#beranda">Beranda</a>
-  <a href="#tentang">Tentang DOKB</a>
-  <a href="keanggotaan.html">Keanggotaan</a>
-  <a href="#informasi">Informasi</a>
-  <a href="#kontak">Kontak</a>
-</nav>
-
-<div class="container">
-  <section id="tentang">
-    <h2>Tentang DOKB</h2>
-    <p><strong>DOKB</strong> adalah organisasi berbadan hukum, independen, dan non-profit untuk driver online Kalimantan Selatan.</p>
-  </section>
-
-  <section id="informasi">
-    <h2>Informasi</h2>
-    <p>Halaman ini memuat info resmi DOKB, regulasi transportasi online, dan edukasi driver.</p>
-  </section>
-
-  <section style="margin:60px auto; max-width:600px; background:#ffffff; padding:30px; border-radius:16px; box-shadow:0 10px 25px rgba(0,0,0,0.08); font-family:Arial, sans-serif;">
-
-  <h2 style="text-align:center; color:#0b3d91; margin-bottom:5px;">
-    CEK TARIF BATAS BAWAH (TBB)
-  </h2>
-  <p style="text-align:center; font-size:14px; color:#555; margin-top:0;">
-    Angkutan Sewa Khusus – Kalimantan Selatan
-  </p>
-
-  <p style="font-size:13px; color:#666; text-align:center; margin-bottom:25px;">
-    Mengacu pada SK Gubernur Kalimantan Selatan 
-    No. 100.3.3.1/0991/KUM/2025<br>
-    Tanggal 17 November 2025
-  </p>
-
-  <label style="font-weight:600;">Jarak Perjalanan (km)</label><br>
-  <input type="number" id="jarak" step="0.1" placeholder="Contoh: 6.8"
-    style="width:100%; padding:10px; margin-top:5px; margin-bottom:15px; border-radius:8px; border:1px solid #ccc;">
-
-  <label style="font-weight:600;">Tarif yang Ditawarkan (Rp)</label><br>
-  <input type="number" id="tarifInput" placeholder="Contoh: 30000"
-    style="width:100%; padding:10px; margin-top:5px; margin-bottom:20px; border-radius:8px; border:1px solid #ccc;">
-
-  <button onclick="hitungTarif()"
-    style="width:100%; padding:12px; background:#0b3d91; color:#fff; border:none; border-radius:10px; font-size:15px; cursor:pointer;">
-    Hitung & Bandingkan
-  </button>
-
-  <div id="hasil" style="margin-top:25px;"></div>
-
+<!-- HERO -->
+<section class="pt-32 pb-20 bg-gradient-to-b from-[#0B2C4D] to-[#174A7C] text-white text-center">
+  <div class="max-w-3xl mx-auto px-6">
+    <h2 class="text-3xl md:text-4xl font-bold leading-tight">
+      Perkumpulan Driver Online<br>
+      Kalimantan Selatan Bersatu
+    </h2>
+    <p class="mt-4 text-lg font-light">
+      Advokasi Regulasi. Penguatan Kesejahteraan.
+    </p>
+    <p class="mt-6 text-sm md:text-base text-gray-200">
+      Organisasi berbadan hukum dan memiliki NIB aktif yang merepresentasikan driver online roda empat di Kalimantan Selatan.
+    </p>
+    <div class="mt-8 flex justify-center space-x-4">
+      <a href="#tentang" class="bg-white text-[#0B2C4D] px-6 py-2 rounded-lg font-semibold shadow hover:bg-gray-100">Tentang DOKB</a>
+      <a href="#keanggotaan" class="border border-white px-6 py-2 rounded-lg hover:bg-white hover:text-[#0B2C4D]">Gabung</a>
+    </div>
+  </div>
 </section>
 
-<script>
-function hitungTarif() {
-    let jarak = parseFloat(document.getElementById("jarak").value);
-    let tarifInput = parseFloat(document.getElementById("tarifInput").value);
-    let tarifTBB = 0;
+<!-- LEGALITAS -->
+<section class="py-16 bg-gray-50">
+  <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-8 text-center">
+    
+    <div class="bg-white p-6 rounded-xl shadow-sm">
+      <h3 class="font-bold text-[#0B2C4D]">Berbadan Hukum</h3>
+      <p class="text-sm mt-2">Organisasi resmi dengan legalitas yang sah di Indonesia.</p>
+    </div>
 
-    if (!jarak || jarak <= 0) {
-        document.getElementById("hasil").innerHTML =
-        "<p style='color:red;'>Masukkan jarak yang valid.</p>";
-        return;
-    }
+    <div class="bg-white p-6 rounded-xl shadow-sm">
+      <h3 class="font-bold text-[#0B2C4D]">NIB Aktif</h3>
+      <p class="text-sm mt-2">Memiliki Nomor Induk Berusaha yang terdaftar dan aktif.</p>
+    </div>
 
-    if (jarak <= 3) {
-        tarifTBB = 16000;
-    } else {
-        tarifTBB = 16000 + (jarak - 3) * 4000;
-    }
+    <div class="bg-white p-6 rounded-xl shadow-sm">
+      <h3 class="font-bold text-[#0B2C4D]">Fokus Roda Empat (ASK)</h3>
+      <p class="text-sm mt-2">Berorientasi pada Angkutan Sewa Khusus kendaraan roda empat.</p>
+    </div>
 
-    tarifTBB = Math.round(tarifTBB);
+  </div>
+</section>
 
-    let output = "<div style='margin-top:20px; padding:20px; background:#f4f8ff; border-radius:12px;'>";
+<!-- TENTANG -->
+<section id="tentang" class="py-20">
+  <div class="max-w-4xl mx-auto px-6 text-center">
+    <h2 class="text-2xl font-bold text-[#0B2C4D]">Tentang DOKB</h2>
+    <p class="mt-6 text-gray-600 leading-relaxed">
+      Perkumpulan Driver Online Kalimantan Selatan Bersatu (DOKB) adalah organisasi independen dan non-profit 
+      yang berperan sebagai representasi resmi driver online roda empat di Kalimantan Selatan. 
+      DOKB menjadi mitra dialog pemerintah daerah serta pengawas kebijakan aplikator berbasis regulasi nasional dan daerah.
+    </p>
+  </div>
+</section>
 
-    output += "<p style='margin:0; font-size:13px; color:#555;'>Tarif Minimum (Pendapatan Bersih Driver)</p>";
-    output += "<h1 style='margin:5px 0; color:#0b3d91;'>Rp " + tarifTBB.toLocaleString("id-ID") + "</h1>";
+<!-- PROGRAM -->
+<section id="program" class="py-16 bg-gray-50">
+  <div class="max-w-6xl mx-auto px-6 text-center">
+    <h2 class="text-2xl font-bold text-[#0B2C4D]">Program Prioritas 2026</h2>
+    <div class="grid md:grid-cols-4 gap-6 mt-10">
 
-    if (tarifInput) {
-        let selisih = tarifInput - tarifTBB;
+      <div class="bg-white p-6 rounded-xl shadow-sm">
+        <h3 class="font-semibold">Advokasi Regulasi</h3>
+      </div>
 
-        if (selisih >= 0) {
-            output += "<p style='color:green; font-weight:600;'>✅ Sesuai atau di atas TBB</p>";
-        } else {
-            output += "<p style='color:red; font-weight:600;'>❌ Di bawah TBB</p>";
-            output += "<p style='margin:5px 0;'>Selisih kekurangan: Rp " +
-            Math.abs(selisih).toLocaleString("id-ID") + "</p>";
-        }
-    }
+      <div class="bg-white p-6 rounded-xl shadow-sm">
+        <h3 class="font-semibold">Monitoring Kebijakan</h3>
+      </div>
 
-    output += "<p style='font-size:12px; color:#666; margin-top:10px;'>Perhitungan sesuai Tarif Batas Bawah Angkutan Sewa Khusus berdasarkan SK Gubernur Kalimantan Selatan.</p>";
+      <div class="bg-white p-6 rounded-xl shadow-sm">
+        <h3 class="font-semibold">Edukasi Anggota</h3>
+      </div>
 
-    output += "</div>";
+      <div class="bg-white p-6 rounded-xl shadow-sm">
+        <h3 class="font-semibold">Penguatan Organisasi</h3>
+      </div>
 
-    document.getElementById("hasil").innerHTML = output;
-}
-</script>
+    </div>
+  </div>
+</section>
 
-  <section id="kontak">
-    <h2>Kontak</h2>
-    <p>Email: sekretariat@dokb.or.id<br>
-       WhatsApp: +62 822-4646-3652<br>
-       Alamat: Jln. AMD XII Pondok Pinang Indah No.38 RT 027/003, Pemurus Dalam 70248, Banjarmasin</p>
-  </section>
-</div>
+<!-- KEANGGOTAAN -->
+<section id="keanggotaan" class="py-20">
+  <div class="max-w-3xl mx-auto px-6 text-center">
+    <h2 class="text-2xl font-bold text-[#0B2C4D]">Keanggotaan</h2>
+    <p class="mt-6 text-gray-600">
+      Keanggotaan DOKB diperuntukkan bagi driver online kendaraan roda empat yang beroperasi di wilayah Kalimantan Selatan dan berkomitmen terhadap prinsip legalitas, profesionalitas, serta independensi organisasi.
+    </p>
+  </div>
+</section>
 
-<footer>
-  <p>© 2025 Perkumpulan DOKB | Independen | Non-profit</p>
+<!-- FOOTER -->
+<footer id="kontak" class="bg-[#0B2C4D] text-white py-10">
+  <div class="max-w-6xl mx-auto px-6 text-center text-sm">
+    <p class="font-semibold">Perkumpulan Driver Online Kalimantan Selatan Bersatu (DOKB)</p>
+    <p class="mt-2">
+      Jln. AMD XII Pondok Pinang Indah No. 38 RT 027/003<br>
+      Pemurus Dalam 70248, Banjarmasin, Kalimantan Selatan
+    </p>
+    <p class="mt-2">
+      WA: +62 822 4646 3652 | Email: sekretariat@dokb.or.id
+    </p>
+    <p class="mt-4 text-gray-300 text-xs">
+      © 2026 DOKB. Seluruh hak dilindungi.
+    </p>
+  </div>
 </footer>
 
-<script src="script.js"></script>
 </body>
-</html>
+      </html>
