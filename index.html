@@ -17,7 +17,7 @@
   <div class="container topbar-inner">
     <span>Perkumpulan Driver Online Kalimantan Selatan Bersatu (DOKB)</span>
     <div class="top-meta"><span>Organisasi Berbadan Hukum</span><i>•</i><span>Independen</span><i>•</i><span>Non-Profit</span></div>
-    <div class="top-right"><span>📍 Kalimantan Selatan</span><span>🕘 WITA (GMT+8)</span></div>
+    <div class="top-right"><span>📍 Kalimantan Selatan</span><span>🕒 <time id="wita-clock" aria-label="Waktu Indonesia Tengah">--:-- WITA</time></span></div>
   </div>
 </div>
 
@@ -28,7 +28,7 @@
       <div>
         <span class="brand-kicker">WEBSITE RESMI</span>
         <strong>DOKB</strong>
-        <small>Perkumpulan Driver Online<br>Kalimantan Selatan Bersatu</small>
+        
       </div>
     </a>
 
@@ -127,5 +127,25 @@
   <div class="container footer-bottom"><span>© 2026 Perkumpulan Driver Online Kalimantan Selatan Bersatu (DOKB)</span><span>Independen • Non-Profit • Berbadan Hukum</span></div>
   <div class="container attribution">Foto latar: Jembatan Barito (Martini Rahman, CC BY-SA 4.0) & Pegunungan Meratus (Tim WikiBanua 2.0, CC BY-SA 4.0), Wikimedia Commons.</div>
 </footer>
+
+<script>
+(function () {
+  const clock = document.getElementById('wita-clock');
+  if (!clock) return;
+  function updateWITA() {
+    const now = new Date();
+    const time = new Intl.DateTimeFormat('id-ID', {
+      timeZone: 'Asia/Makassar',
+      hour: '2-digit',
+      minute: '2-digit',
+      hour12: false
+    }).format(now);
+    clock.textContent = time + ' WITA';
+  }
+  updateWITA();
+  setInterval(updateWITA, 1000);
+})();
+</script>
+
 </body>
 </html>
