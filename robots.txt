@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://www.dokb.or.id/sitemap.xml
+
+Sitemap: https://dokb.or.id/sitemap.xml

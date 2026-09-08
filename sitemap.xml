@@ -1,15 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url><loc>https://www.dokb.or.id/index.html</loc></url>
-<url><loc>https://www.dokb.or.id/tentang.html</loc></url>
-<url><loc>https://www.dokb.or.id/legalitas.html</loc></url>
-<url><loc>https://www.dokb.or.id/program.html</loc></url>
-<url><loc>https://www.dokb.or.id/keanggotaan.html</loc></url>
-<url><loc>https://www.dokb.or.id/advokasi.html</loc></url>
-<url><loc>https://www.dokb.or.id/regulasi.html</loc></url>
-<url><loc>https://www.dokb.or.id/publikasi.html</loc></url>
-<url><loc>https://www.dokb.or.id/transparansi.html</loc></url>
-<url><loc>https://www.dokb.or.id/kontak.html</loc></url>
-<url><loc>https://www.dokb.or.id/privacy.html</loc></url>
-<url><loc>https://www.dokb.or.id/terms.html</loc></url>
+  <url>
+    <loc>https://dokb.or.id/</loc>
+    <lastmod>2026-09-08</lastmod>
+  </url>
+  <url>
+    <loc>https://dokb.or.id/tentang.html</loc>
+    <lastmod>2026-09-08</lastmod>
+  </url>
+  <url>
+    <loc>https://dokb.or.id/legalitas.html</loc>
+    <lastmod>2026-09-08</lastmod>
+  </url>
+  <url>
+    <loc>https://dokb.or.id/program.html</loc>
+    <lastmod>2026-09-08</lastmod>
+  </url>
+  <url>
+    <loc>https://dokb.or.id/keanggotaan.html</loc>
+    <lastmod>2026-09-08</lastmod>
+  </url>
+  <url>
+    <loc>https://dokb.or.id/regulasi.html</loc>
+    <lastmod>2026-09-08</lastmod>
+  </url>
+  <url>
+    <loc>https://dokb.or.id/advokasi.html</loc>
+    <lastmod>2026-09-08</lastmod>
+  </url>
+  <url>
+    <loc>https://dokb.or.id/publikasi.html</loc>
+    <lastmod>2026-09-08</lastmod>
+  </url>
+  <url>
+    <loc>https://dokb.or.id/transparansi.html</loc>
+    <lastmod>2026-09-08</lastmod>
+  </url>
+  <url>
+    <loc>https://dokb.or.id/kontak.html</loc>
+    <lastmod>2026-09-08</lastmod>
+  </url>
+  <url>
+    <loc>https://dokb.or.id/privacy.html</loc>
+    <lastmod>2026-09-08</lastmod>
+  </url>
+  <url>
+    <loc>https://dokb.or.id/terms.html</loc>
+    <lastmod>2026-09-08</lastmod>
+  </url>
 </urlset>
