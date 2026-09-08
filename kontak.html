@@ -2,76 +2,86 @@
 <html lang="id">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Kontak DOKB | Sekretariat</title>
-<meta name="description" content="Kontak resmi Sekretariat DOKB.">
-<link rel="canonical" href="https://dokb.or.id/kontak.html">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kontak | DOKB</title>
+<link rel="stylesheet" href="/design-system.css">
+<link rel="icon" href="/favicon.svg">
+<style>
+.page-hero{padding:72px 0 44px}.page-hero h1{max-width:760px}
+.contact-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:24px}
+.contact-list{display:grid;gap:14px;margin-top:20px}.contact-item{padding:18px;border:1px solid var(--border,#dbe4ee);border-radius:18px;background:var(--surface,#fff)}
+.contact-item strong{display:block;margin-bottom:5px}.contact-item a{color:inherit;text-decoration:none}
+.contact-item a:hover{text-decoration:underline}
+@media(max-width:900px){.contact-grid{grid-template-columns:1fr}}
+</style>
 </head>
 <body>
-<div class="topbar">
-  <div class="container topbar-inner">
-    <span>Perkumpulan Driver Online Kalimantan Selatan Bersatu (DOKB)</span>
-    <span class="topbar-location">Kalimantan Selatan, Indonesia</span>
-  </div>
-</div>
 <header class="site-header">
-  <div class="container masthead">
-    <a class="masthead-brand" href="/index.html" aria-label="DOKB - Beranda">
-      <img src="/logo-dokb.png" alt="Logo resmi DOKB">
-      <div class="masthead-name">
-        <span class="eyebrow">WEBSITE RESMI</span>
-        <strong>PERKUMPULAN DRIVER ONLINE</strong>
-        <strong>KALIMANTAN SELATAN BERSATU</strong>
-        <span class="masthead-short">DOKB</span>
-      </div>
-    </a>
-    <button class="menu" type="button" aria-label="Buka menu" aria-expanded="false"
-      onclick="const n=document.querySelector('nav'); const o=n.classList.toggle('open'); this.setAttribute('aria-expanded',o)">
-      <span>Menu</span><span class="hamb">☰</span>
-    </button>
-  </div>
-  <div class="container nav-wrap">
-    <nav aria-label="Navigasi utama">
-      <a href="/index.html">Beranda</a><a href="/tentang.html">Tentang</a><a href="/legalitas.html">Legalitas</a><a href="/program.html">Program</a><a href="/keanggotaan.html">Keanggotaan</a><a href="/advokasi.html">Advokasi</a><a href="/regulasi.html">Regulasi ASK</a><a href="/publikasi.html">Publikasi</a><a href="/transparansi.html">Transparansi</a><a href="/kontak.html" class="active">Kontak</a>
+  <div class="container header-inner">
+    <a class="brand" href="/"><img src="/logo-dokb-bulat.png" alt="Logo DOKB"><span>DOKB</span></a>
+    <nav class="nav">
+      <a href="/tentang.html">Tentang</a><a href="/program.html">Program</a><a href="/regulasi.html">Regulasi</a>
+      <a href="/advokasi.html">Advokasi</a><a href="/publikasi.html">Publikasi</a><a href="/kontak.html" aria-current="page">Kontak</a>
     </nav>
   </div>
 </header>
 
-<section class="section"><div class="container"><div class="breadcrumb">Beranda / Kontak</div><h1>Kontak Sekretariat</h1><div class="grid two">
-<div class="card"><h3>Alamat</h3><p>Jl. AMD XII Komplek Pondok Pinang Indah No. 38, Pemurus Dalam, Kecamatan Banjarmasin Selatan, Kota Banjarmasin, Kalimantan Selatan 70248.</p></div>
-<div class="card"><h3>Email Administrasi</h3><p><a href="mailto:sekretariat.dokb@gmail.com">sekretariat.dokb@gmail.com</a></p><p>Email ini digunakan sebagai kontak administrasi DOKB.</p></div>
-</div><div class="notice"><strong>Domain resmi:</strong> dokb.or.id adalah domain utama dan website resmi DOKB.</div></div></section>
+<main>
+<section class="page-hero">
+  <div class="container">
+    <span class="badge">SEKRETARIAT DOKB</span>
+    <h1>Terhubung dengan DOKB secara resmi.</h1>
+    <p class="lead">Gunakan kanal resmi untuk komunikasi organisasi, informasi program, administrasi, maupun penyampaian aspirasi driver roda 4 di Kalimantan Selatan.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container contact-grid">
+    <div class="card">
+      <span class="eyebrow">KANAL RESMI</span>
+      <h2>Sekretariat DOKB</h2>
+      <p>Komunikasi publik diarahkan melalui sekretariat agar informasi dapat diterima, dicatat, dan ditindaklanjuti secara tertib.</p>
+      <div class="contact-list">
+        <div class="contact-item">
+          <strong>Alamat Sekretariat</strong>
+          Jl. AMD XII Komplek Pondok Pinang Indah No. 38, Pemurus Dalam, Kecamatan Banjarmasin Selatan, Kota Banjarmasin, Kalimantan Selatan 70248.
+        </div>
+        <div class="contact-item">
+          <strong>Email</strong>
+          <a href="mailto:sekretariat.dokb@gmail.com">sekretariat.dokb@gmail.com</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <span class="eyebrow">MEDIA & LAYANAN DIGITAL</span>
+      <h2>Kanal DOKB</h2>
+      <div class="stack">
+        <a class="btn btn-primary" href="https://dokb.or.id">Website DOKB</a>
+        <a class="btn btn-secondary" href="https://app.dokb.or.id">Portal Keanggotaan</a>
+        <a class="btn btn-secondary" href="https://lapor.dokb.or.id">Portal Laporan</a>
+        <a class="btn btn-secondary" href="https://instagram.com/dokb_kalsel">Instagram</a>
+        <a class="btn btn-secondary" href="https://youtube.com/@DOKBKalsel">YouTube</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-muted">
+  <div class="container">
+    <div class="callout">
+      <strong>Prinsip komunikasi DOKB</strong>
+      <p>Setiap penyampaian informasi dan aspirasi diupayakan berlangsung secara tertib, berbasis data, sesuai ketentuan organisasi, serta mengutamakan dialog dan penyelesaian yang terukur.</p>
+    </div>
+  </div>
+</section>
+</main>
 
 <footer class="site-footer">
-  <div class="container footergrid">
-    <div>
-      <div class="footer-brand">DOKB</div>
-      <p>Perkumpulan Driver Online Kalimantan Selatan Bersatu adalah organisasi berbadan hukum, independen, dan non-profit yang berfokus pada penguatan driver online roda 4 di Kalimantan Selatan.</p>
-      <p class="small">Charity ID Google for Nonprofits: 6025091763100926</p>
-    </div>
-    <div>
-      <h3>Informasi</h3>
-      <p>
-        <a href="/tentang.html">Tentang</a><br>
-        <a href="/legalitas.html">Legalitas</a><br>
-        <a href="/program.html">Program</a><br>
-        <a href="/regulasi.html">Regulasi ASK</a><br>
-        <a href="/transparansi.html">Transparansi</a>
-      </p>
-    </div>
-    <div>
-      <h3>Kontak Sekretariat</h3>
-      <p>Jl. AMD XII Komplek Pondok Pinang Indah No. 38, Pemurus Dalam, Banjarmasin Selatan, Kota Banjarmasin, Kalimantan Selatan 70248</p>
-      <p><a href="mailto:sekretariat.dokb@gmail.com">sekretariat.dokb@gmail.com</a></p>
-    </div>
-  </div>
-  <div class="container footer-bottom">
-    <span>© 2026 Perkumpulan Driver Online Kalimantan Selatan Bersatu (DOKB)</span>
-    <span>Independen • Non-Profit • Berbadan Hukum</span>
+  <div class="container footer-grid">
+    <div><strong>Perkumpulan Driver Online Kalimantan Selatan Bersatu (DOKB)</strong><p>Independen • Non-profit • Roda 4 • Kalimantan Selatan</p></div>
+    <div><a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a></div>
   </div>
 </footer>
-</body></html>
+</body>
+</html>
