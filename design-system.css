@@ -287,3 +287,44 @@ textarea{min-height:130px;resize:vertical}
     padding-top:42px;
   }
 }
+
+/* =========================================================
+   DOKB V2.3 — INNER PAGE HEADER PATCH 2
+   Readability + mobile height refinement
+   ========================================================= */
+
+/* Improve text contrast inside the blue inner-page hero */
+.page-hero .lead{
+  color:rgba(255,255,255,.84);
+}
+
+/* Keep the inner-page header compact on mobile */
+@media(max-width:620px){
+  .header-inner{
+    padding-top:8px;
+    padding-bottom:8px;
+    gap:6px;
+  }
+
+  .site-header .brand img{
+    width:46px;
+    height:46px;
+  }
+
+  .site-header .brand span{
+    font-size:1.08rem;
+  }
+
+  .site-header .nav{
+    gap:2px;
+  }
+
+  .site-header .nav a{
+    padding:7px 4px;
+    font-size:.74rem;
+  }
+
+  .page-hero{
+    padding-top:38px;
+  }
+}
