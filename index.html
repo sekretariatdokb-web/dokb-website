@@ -79,6 +79,168 @@
 }
 </style>
 
+
+<style id="dokb-master-foto1-lock">
+/* =========================================================
+   DOKB V2.3 — MASTER FOTO 1
+   Final visual lock. Do not alter layout/content below.
+   ========================================================= */
+
+/* Full-bleed hero: no white/boxed background artifact */
+.hero{
+  min-height:560px !important;
+  background-image:
+    linear-gradient(90deg,rgba(3,20,39,.88) 0%,rgba(3,28,52,.62) 42%,rgba(3,27,50,.16) 100%),
+    url("https://upload.wikimedia.org/wikipedia/commons/b/b4/Jembatan_Barito_di_Kabupaten_Barito_Kuala.jpg") !important;
+  background-size:cover !important;
+  background-repeat:no-repeat !important;
+  background-position:center 58% !important;
+}
+
+/* Meratus becomes a seamless visual layer, not a white/boxed panel */
+.hero-meratus{
+  right:0 !important;
+  bottom:0 !important;
+  width:58% !important;
+  height:100% !important;
+  clip-path:none !important;
+  opacity:.58 !important;
+  mix-blend-mode:normal !important;
+  background:
+    linear-gradient(90deg,rgba(5,26,46,0) 0%,rgba(5,26,46,.08) 100%),
+    url("https://upload.wikimedia.org/wikipedia/commons/b/bc/Pegunungan_Meratus_001.jpg") center/cover no-repeat !important;
+  -webkit-mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.35) 12%,#000 38%,#000 100%);
+  mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.35) 12%,#000 38%,#000 100%);
+}
+
+/* Desktop composition — exactly the Foto 1 hierarchy */
+.hero-content{
+  min-height:560px !important;
+  grid-template-columns:1.15fr .85fr !important;
+  align-items:center !important;
+  padding-top:76px !important;
+}
+.hero-copy{max-width:700px !important}
+.hero h1{
+  font-size:clamp(3rem,5.7vw,5rem) !important;
+  margin:15px 0 18px !important;
+}
+.hero-copy>p{
+  max-width:650px !important;
+  font-size:.98rem !important;
+}
+.hero-side{height:100% !important}
+.geo-label{
+  top:35% !important;
+  right:5% !important;
+  text-align:center !important;
+}
+.tagline{
+  right:6% !important;
+  bottom:24% !important;
+  font-size:2rem !important;
+}
+.mobility-note{
+  right:5% !important;
+  bottom:9% !important;
+  font-size:.7rem !important;
+  line-height:1.6 !important;
+}
+
+/* The value cards sit exactly on the hero edge */
+.pillars-wrap{
+  margin-top:-30px !important;
+}
+
+/* Mobile: preserve Foto 1 visual hierarchy without overlap */
+@media(max-width:820px){
+  .hero{
+    min-height:560px !important;
+    background-position:58% center !important;
+  }
+  .hero-content{
+    min-height:560px !important;
+    display:block !important;
+    padding-top:116px !important;
+  }
+  .hero-copy{
+    position:relative !important;
+    z-index:4 !important;
+    max-width:100% !important;
+  }
+  .hero h1{
+    font-size:clamp(2.65rem,11.5vw,4.25rem) !important;
+    line-height:.96 !important;
+  }
+  .hero-copy>p{
+    font-size:.88rem !important;
+    max-width:95% !important;
+  }
+  .hero-side{
+    position:absolute !important;
+    inset:0 !important;
+    height:100% !important;
+    min-height:0 !important;
+    z-index:3 !important;
+    pointer-events:none !important;
+  }
+  .hero-meratus{
+    width:67% !important;
+    height:100% !important;
+    opacity:.48 !important;
+  }
+  .geo-label{
+    top:57% !important;
+    right:5% !important;
+  }
+  .tagline{
+    right:6% !important;
+    bottom:18% !important;
+    font-size:1.5rem !important;
+  }
+  .mobility-note{
+    right:6% !important;
+    bottom:7% !important;
+    font-size:.56rem !important;
+    line-height:1.55 !important;
+    white-space:nowrap !important;
+  }
+}
+
+@media(max-width:560px){
+  .hero{
+    min-height:560px !important;
+    background-position:57% center !important;
+  }
+  .hero-content{
+    min-height:560px !important;
+    padding-top:108px !important;
+  }
+  .hero-copy>p{
+    font-size:.86rem !important;
+    line-height:1.55 !important;
+  }
+  .hero-meratus{
+    width:72% !important;
+    opacity:.43 !important;
+  }
+  .geo-label{
+    top:58% !important;
+    right:4% !important;
+  }
+  .tagline{
+    right:5% !important;
+    bottom:18% !important;
+    font-size:1.42rem !important;
+  }
+  .mobility-note{
+    right:5% !important;
+    bottom:7% !important;
+    font-size:.55rem !important;
+  }
+}
+</style>
+
 </head>
 <body>
 
