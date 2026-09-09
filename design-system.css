@@ -328,3 +328,43 @@ textarea{min-height:130px;resize:vertical}
     padding-top:38px;
   }
 }
+
+/* =========================================================
+   DOKB V2.3 — MOBILE INNER HEADER FINAL
+   Mobile only: centered logo, no adjacent DOKB wordmark.
+   Desktop header remains unchanged.
+   ========================================================= */
+@media(max-width:620px){
+  .site-header .brand{
+    width:100%;
+    justify-content:center;
+  }
+
+  .site-header .brand img{
+    width:62px;
+    height:62px;
+  }
+
+  .site-header .brand span{
+    display:none;
+  }
+
+  .header-inner{
+    padding-top:10px;
+    padding-bottom:10px;
+    gap:7px;
+  }
+
+  .site-header .nav{
+    width:100%;
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:4px;
+  }
+
+  .site-header .nav a{
+    text-align:center;
+    font-size:.74rem;
+    padding:8px 4px;
+  }
+}
