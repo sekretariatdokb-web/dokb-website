@@ -11,12 +11,46 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/style.css">
 
-<style id="dokb-mobile-kalsel-fix">
-/* QA mobile — menaikkan blok "MOBILITAS AMAN / EKONOMI KUAT / KALSEL MAJU"
-   agar seluruh tulisan terbaca dan tidak tertutup kartu hero. */
-@media (max-width: 600px) {
-  .hero-side .mobility-note {
-    transform: translateY(-58px);
+<style id="dokb-index-final-mobile-qa">
+/* DOKB BERANDA — FINAL MOBILE QA
+   Background tetap Barito × Geopark Meratus.
+   Hanya memperbaiki crop/posisi elemen hero di layar kecil. */
+.hero{
+  background-position:center 58%;
+}
+@media (max-width:820px){
+  .hero{
+    background-position:center 58%;
+  }
+}
+@media (max-width:560px){
+  .hero{
+    min-height:760px;
+    background-position:58% center;
+  }
+  .hero-content{
+    min-height:760px;
+  }
+  .hero-side{
+    min-height:245px;
+  }
+  .geo-label{
+    top:4%;
+    right:4%;
+  }
+  .tagline{
+    right:5%;
+    bottom:30%;
+    font-size:1.55rem;
+  }
+  .mobility-note{
+    right:4%;
+    bottom:5%;
+    font-size:.58rem;
+    line-height:1.65;
+    letter-spacing:.18em;
+    text-align:center;
+    white-space:nowrap;
   }
 }
 </style>
@@ -159,4 +193,4 @@
 </script>
 
 </body>
-</html>
+                                                                                                                                                                </html>
